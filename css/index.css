@@ -149,7 +149,7 @@ body {
   src: local('Francois One Regular'), local('FrancoisOne-Regular'), url(https://fonts.gstatic.com/s/francoisone/v13/_Xmr-H4zszafZw3A-KPSZut9wQiU.ttf) format('truetype');
 }
 html {
-  background: #000080;
+  background: #1d365d;
 }
 body {
   font-family: 'Crimson Text', serif;
@@ -171,6 +171,7 @@ header {
 header nav {
   font-size: 1.25rem;
   display: flex;
+  margin-right: 5%;
 }
 header nav a {
   text-decoration: none;
@@ -183,24 +184,91 @@ header nav a:hover {
   width: 75%;
   color: #ffffff;
   margin: 0 auto;
+  font-size: 1.3rem;
 }
-.top_content {
+.page_content h2 {
+  font-size: 2rem;
+}
+.page_content .top_content {
   background: #000000;
+  padding: 2%;
+  border-radius: 2%;
 }
-.top_content img {
+.page_content .top_content .resume_name,
+.page_content .top_content .resume_motto {
+  text-align: center;
+}
+.page_content .top_content .resume_name {
+  margin-top: 20px;
+}
+.page_content .top_content .open_text,
+.page_content .top_content .page_btn {
+  margin: 20px 5%;
+}
+.page_content .top_content img {
   margin: 0 auto;
   display: block;
+  border-radius: 2%;
+  padding-top: 3%;
 }
-.top_content h1 {
+.page_content .top_content h1 {
   font-size: 2.75rem;
 }
-.middle_content {
+.page_content .top_content .resume_motto {
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.page_content .top_content .page_btn {
+  width: 15%;
+  background: #4580E3;
+  border-radius: 3%;
+  text-align: center;
+  padding: 1%;
+}
+.page_content .middle_content {
   display: flex;
   margin: 20px 0;
   justify-content: space-between;
 }
-.middle_content .box {
+.page_content .middle_content .box {
   width: 45%;
+}
+.page_content .middle_content .box h2 {
+  margin-bottom: 20px;
+}
+.page_content .middle_content .box:nth-child(2) h2 {
+  text-align: center;
+}
+.page_content .middle_content .box:nth-child(2) ul {
+  border: 1px solid black;
+  border-radius: 2%;
+  background: #4580E3;
+}
+.page_content .middle_content .box:nth-child(2) ul li {
+  border: 1px solid black;
+  padding: 1%;
+  text-align: center;
+}
+.page_content .bottom_content {
+  margin-bottom: 20px;
+}
+.page_content .bottom_content h2 {
+  margin-bottom: 20px;
+}
+.page_content .bottom_content table tr:nth-child(odd) {
+  background: #4580E3;
+}
+.page_content .bottom_content table tr:nth-child(even) {
+  background: #BABCBF;
+}
+.page_content .bottom_content table td {
+  border: 2px solid red;
+  padding: 1%;
+}
+.page_content .bottom_content table th {
+  border: 2px solid green;
+  padding: 1%;
 }
 footer {
   background: #4580E3;
@@ -210,5 +278,8 @@ footer {
 @media (max-width: 500px) {
   header {
     flex-direction: column;
+  }
+  .top_content img {
+    display: none;
   }
 }

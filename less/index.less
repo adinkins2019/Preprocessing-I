@@ -72,7 +72,7 @@ html, body {
 // Declaration: Global variables						 //
 ///////////////////////////////////////////////////////////
 
-@page_bgcolor: #000080; 		//navy blue
+@page_bgcolor: #1d365d; 		//cello
 @footer_bgcolor: #4580E3;		//royal blue
 @hover_txtcolor: #BABCBF;       //silver sand
 @desktop_maxwidth: 1000px;
@@ -80,6 +80,7 @@ html, body {
 @mobile_maxwidth: 500px;
 @top_contentcolor: #000000;     //Black
 @page_fontcolor: #ffffff;		//white
+@table_row_contrastcolor: 	#D2B48C; //tan
 
 
 
@@ -111,6 +112,7 @@ header {
 	nav {
 		font-size: 1.25rem;
 		display: flex;
+		margin-right: 5%;
 		
 		a {
 			text-decoration: none;
@@ -125,30 +127,104 @@ header {
 	width: 75%;
 	color: @page_fontcolor;
 	margin: 0 auto;
+	font-size: 1.3rem;
 
-}
-
-.top_content {
-	background: @top_contentcolor;
-	img {
-		margin: 0 auto;
-		display: block;
+	h2 {
+		font-size: 2rem;
 	}
-	h1 {
-		font-size: 2.75rem;
-	}
-}
 
-.middle_content {
-	display: flex;
-	margin: 20px 0; 
-	justify-content: space-between;
-	.box {
-		width: 45%;
-	}
-}
+	.top_content {
+		background: @top_contentcolor;
+		padding: 2%;
+		.resume_name, .resume_motto {
+			text-align: center;
+		}
 
-.bottom_content {
+		.resume_name {
+			margin-top: 20px;
+		}
+		
+		.open_text, .page_btn {
+			margin: 20px 5%;
+		}
+		
+		img {
+			margin: 0 auto;
+			display: block;
+			border-radius: 2%;
+			padding-top: 3%;
+		}
+		h1 {
+			font-size: 2.75rem;
+		}
+		border-radius: 2%;
+		.resume_motto {
+			font-size: 1.75rem;
+			font-weight: bold;
+			font-style: italic;
+		}
+		.page_btn {
+			width: 15%;
+			background: @footer_bgcolor;
+			border-radius: 3%;
+			text-align: center;
+			padding: 1%;
+		}
+	}
+	
+	.middle_content {
+		display: flex;
+		margin: 20px 0; 
+		justify-content: space-between;
+		.box {
+			width: 45%;
+			h2 {
+				margin-bottom: 20px;
+			}
+		}
+		.box:nth-child(2) {
+			h2 {
+				text-align: center;
+			}
+			ul {
+				border: 1px solid black;
+				border-radius: 2%;
+				background: @footer_bgcolor;
+				li {
+				border: 1px solid black;
+				padding: 1%;
+				text-align: center;
+			}
+		}
+		}
+	}
+	
+	.bottom_content {
+		margin-bottom: 20px;
+		h2 {
+			margin-bottom: 20px;
+		}
+		table {
+	
+			tr:nth-child(odd)
+			{
+				background: @footer_bgcolor;
+			}
+			tr:nth-child(even){
+				background: @hover_txtcolor;
+			}
+			td {
+				border: 2px solid red;
+				padding: 1%;
+			}
+			th {
+				border: 2px solid green;
+				padding: 1%;
+			}
+		}
+	}
+	
+
 
 }
 
@@ -170,6 +246,11 @@ footer {
 header {
 	flex-direction: column;
 
+}
+.top_content{
+	img {
+		display: none;
+	}
 }
 }
 
