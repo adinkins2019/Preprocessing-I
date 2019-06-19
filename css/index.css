@@ -1,1 +1,214 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Crimson Text Regular'), local('CrimsonText-Regular'), url(https://fonts.gstatic.com/s/crimsontext/v9/wlp2gwHKFkZgtmSR3NB0oRJfbwhW.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Francois One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Francois One Regular'), local('FrancoisOne-Regular'), url(https://fonts.gstatic.com/s/francoisone/v13/_Xmr-H4zszafZw3A-KPSZut9wQiU.ttf) format('truetype');
+}
+html {
+  background: #000080;
+}
+body {
+  font-family: 'Crimson Text', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Francois One', sans-serif;
+}
+header {
+  background: #4580E3;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+header nav {
+  font-size: 1.25rem;
+  display: flex;
+}
+header nav a {
+  text-decoration: none;
+  padding: 0px 5%;
+}
+header nav a:hover {
+  color: #BABCBF;
+}
+.page_content {
+  width: 75%;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.top_content {
+  background: #000000;
+}
+.top_content img {
+  margin: 0 auto;
+  display: block;
+}
+.top_content h1 {
+  font-size: 2.75rem;
+}
+.middle_content {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.middle_content .box {
+  width: 45%;
+}
+footer {
+  background: #4580E3;
+  text-align: center;
+  padding: 20px 0;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+}
