@@ -87,8 +87,23 @@ html, body {
 /////////////////////////////////////////////////////////////
 //  Mix-Ins                                                //
 /////////////////////////////////////////////////////////////
+.makebutton() {
+	
+	width: 15%;
+	background: @footer_bgcolor;
+	border-radius: 3%;
+	text-align: center;
+	padding: 1%;
+	a{
+		text-decoration: none;
+	}
+}
 
-
+.cite_img() {
+	
+	text-align:center; 
+	font-size: 0.5rem;
+}
 
 
 
@@ -109,6 +124,20 @@ header {
 	display: flex;
 	margin-bottom: 20px;
 	justify-content: flex-end;
+
+	@media (max-width: @mobile_maxwidth){
+		justify-content: flex-start;
+		nav {
+			flex-direction: column;
+			width: 100%;
+			a {
+				text-align: center;
+				padding: 30px 0;
+				border-top: 1px solid black;
+				border-bottom: 1px solid black;
+			}
+		}
+	}
 	nav {
 		font-size: 1.25rem;
 		display: flex;
@@ -136,6 +165,14 @@ header {
 	.top_content {
 		background: @top_contentcolor;
 		padding: 2%;
+		.image_cite {
+			/*text-align:center; 
+			font-size: 0.5rem;*/
+			.cite_img();
+			@media (max-width: @mobile_maxwidth){
+				display: none;
+			}
+		}
 		.resume_name, .resume_motto {
 			text-align: center;
 		}
@@ -153,6 +190,9 @@ header {
 			display: block;
 			border-radius: 2%;
 			padding-top: 3%;
+			@media (max-width: @mobile_maxwidth){
+				display: none;
+			}
 		}
 		h1 {
 			font-size: 2.75rem;
@@ -164,11 +204,20 @@ header {
 			font-style: italic;
 		}
 		.page_btn {
-			width: 15%;
+			/*width: 15%;
 			background: @footer_bgcolor;
 			border-radius: 3%;
 			text-align: center;
 			padding: 1%;
+			a{
+				text-decoration: none;
+			}*/
+			.makebutton();
+			@media (max-width: @mobile_maxwidth){
+				width: 40%;
+				padding: 2%;
+				margin: 0 auto;
+			}
 		}
 	}
 	
@@ -176,15 +225,25 @@ header {
 		display: flex;
 		margin: 20px 0; 
 		justify-content: space-between;
+		@media (max-width: @mobile_maxwidth){
+			flex-direction: column;
+		}
 		.box {
 			width: 45%;
 			h2 {
 				margin-bottom: 20px;
 			}
+			@media (max-width: @mobile_maxwidth){
+				width: 100%;
+				margin-top: 20px;
+			}
 		}
 		.box:nth-child(2) {
 			h2 {
 				text-align: center;
+				@media (max-width: @mobile_maxwidth){
+					text-align: left;
+				}
 			}
 			ul {
 				border: 1px solid black;
@@ -205,7 +264,7 @@ header {
 			margin-bottom: 20px;
 		}
 		table {
-	
+			width: 100%;
 			tr:nth-child(odd)
 			{
 				background: @footer_bgcolor;
@@ -214,11 +273,11 @@ header {
 				background: @hover_txtcolor;
 			}
 			td {
-				border: 2px solid red;
+				//border: 2px solid red;
 				padding: 1%;
 			}
 			th {
-				border: 2px solid green;
+				//border: 2px solid green;
 				padding: 1%;
 			}
 		}
@@ -242,17 +301,7 @@ footer {
 
 }
 
-@media (max-width: @mobile_maxwidth) {
-header {
-	flex-direction: column;
 
-}
-.top_content{
-	img {
-		display: none;
-	}
-}
-}
 
 
 
