@@ -106,6 +106,10 @@ html, body {
 	font-size: 0.5rem;
 }
 
+.makeactive() {
+	background: @page_bgcolor;
+	color: @footer_bgcolor;
+}
 /////////////////////////////////////////////////////////////
 // LESS rules											   //
 /////////////////////////////////////////////////////////////
@@ -127,33 +131,72 @@ header {
 	display: flex;
 	margin-bottom: 20px;
 	justify-content: flex-end;
+	padding-top: 40px;
 
+	nav {
+		font-size: 1.35rem;
+		display: flex;
+		margin-right: 5%;
+		
+		ul {
+			display: flex;
+			li {
+				padding: 10px 4%;
+				border: 1px solid black;
+				margin: 0;
+				text-align: center;
+			}
+			li:hover {
+				background: @page_bgcolor;
+			}
+			li:first-child {
+				border-top-left-radius: 10%;
+			} 
+			li:last-child {
+				border-top-right-radius: 10%;
+			}
+			.current_page {
+				.makeactive();
+			}
+		}
+		
+		a {
+			text-decoration: none;
+			
+		}
+		a:hover {
+			color: @footer_bgcolor;
+		}
+	}
+	
 	@media (max-width: @mobile_maxwidth){
+		padding-top: 0px;
+	
 		justify-content: flex-start;
 		nav {
 			flex-direction: column;
 			width: 100%;
-			a {
-				text-align: center;
-				padding: 30px 0;
-				border-top: 1px solid black;
-				border-bottom: 1px solid black;
+			ul {
+				flex-direction: column;
+				li {
+					width: 100%;
+					padding: 0px 5%;
+					border-top: 1px solid black;
+					border-bottom: 1px solid black;
+					text-align: justify; 
+					
+				}
+				
+				.current_page:hover {
+					.makeactive();
+				}
+				
+				
 			}
+			
 		}
 	}
-	nav {
-		font-size: 1.25rem;
-		display: flex;
-		margin-right: 5%;
-		
-		a {
-			text-decoration: none;
-			padding: 0px 5%;
-		}
-		a:hover {
-			color: @hover_txtcolor;
-		}
-	}
+	
 }
 .page_content {
 	width: 75%;
@@ -254,7 +297,7 @@ header {
 				background: @footer_bgcolor;
 				li {
 				border: 1px solid black;
-				padding: 1%;
+				padding: 2%;
 				text-align: center;
 			}
 		}
