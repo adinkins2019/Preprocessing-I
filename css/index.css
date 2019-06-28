@@ -1,1 +1,374 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Crimson Text Regular'), local('CrimsonText-Regular'), url(https://fonts.gstatic.com/s/crimsontext/v9/wlp2gwHKFkZgtmSR3NB0oRJfbwhW.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Francois One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Francois One Regular'), local('FrancoisOne-Regular'), url(https://fonts.gstatic.com/s/francoisone/v13/_Xmr-H4zszafZw3A-KPSZut9wQiU.ttf) format('truetype');
+}
+html {
+  background: #1d365d;
+}
+body {
+  font-family: 'Crimson Text', serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Francois One', sans-serif;
+}
+header {
+  background: #4580E3;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+  padding-top: 40px;
+}
+header nav {
+  font-size: 1.35rem;
+  display: flex;
+  margin-right: 5%;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 10px 4%;
+  border: 1px solid black;
+  margin: 0;
+  text-align: center;
+}
+header nav ul li:hover {
+  background: #1d365d;
+}
+header nav ul li:first-child {
+  border-top-left-radius: 10%;
+}
+header nav ul li:last-child {
+  border-top-right-radius: 10%;
+}
+header nav ul .current_page {
+  background: #1d365d;
+  color: #4580E3;
+}
+header nav a {
+  text-decoration: none;
+}
+header nav a:hover {
+  color: #4580E3;
+}
+@media (max-width: 500px) {
+  header {
+    padding-top: 0px;
+    justify-content: flex-start;
+  }
+  header nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li {
+    width: 100%;
+    padding: 0px 5%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: justify;
+  }
+  header nav ul .current_page:hover {
+    background: #1d365d;
+    color: #4580E3;
+  }
+}
+.page_content {
+  width: 75%;
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+.page_content h2 {
+  font-size: 2rem;
+}
+.page_content .top_content {
+  background: #000000;
+  padding: 2%;
+  border-radius: 2%;
+}
+.page_content .top_content .image_cite {
+  /*text-align:center; 
+			font-size: 0.5rem;*/
+  text-align: center;
+  font-size: 0.5rem;
+}
+@media (max-width: 500px) {
+  .page_content .top_content .image_cite {
+    display: none;
+  }
+}
+.page_content .top_content .resume_name,
+.page_content .top_content .resume_motto {
+  text-align: center;
+}
+.page_content .top_content .resume_name {
+  margin-top: 20px;
+}
+.page_content .top_content .open_text,
+.page_content .top_content .page_btn {
+  margin: 20px 5%;
+}
+.page_content .top_content img {
+  margin: 0 auto;
+  display: block;
+  border-radius: 2%;
+  padding-top: 3%;
+}
+@media (max-width: 500px) {
+  .page_content .top_content img {
+    display: none;
+  }
+}
+.page_content .top_content h1 {
+  font-size: 2.75rem;
+}
+.page_content .top_content .resume_motto {
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.page_content .top_content .page_btn {
+  /*width: 15%;
+			background: @footer_bgcolor;
+			border-radius: 3%;
+			text-align: center;
+			padding: 1%;
+			a{
+				text-decoration: none;
+			}*/
+  width: 15%;
+  background: #4580E3;
+  border-radius: 3%;
+  text-align: center;
+  padding: 1%;
+}
+.page_content .top_content .page_btn a {
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .page_content .top_content .page_btn {
+    width: 40%;
+    padding: 2%;
+    margin: 0 auto;
+  }
+}
+.page_content .middle_content {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .page_content .middle_content {
+    flex-direction: column;
+  }
+}
+.page_content .middle_content .box {
+  width: 45%;
+}
+.page_content .middle_content .box h2 {
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .page_content .middle_content .box {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.page_content .middle_content .box:nth-child(2) h2 {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .page_content .middle_content .box:nth-child(2) h2 {
+    text-align: left;
+  }
+}
+.page_content .middle_content .box:nth-child(2) ul {
+  border: 1px solid black;
+  border-radius: 2%;
+  background: #4580E3;
+}
+.page_content .middle_content .box:nth-child(2) ul li {
+  border: 1px solid black;
+  padding: 2%;
+  text-align: center;
+}
+.page_content .bottom_content {
+  margin-bottom: 20px;
+}
+.page_content .bottom_content h2 {
+  margin-bottom: 20px;
+}
+.page_content .bottom_content table {
+  width: 100%;
+}
+.page_content .bottom_content table tr:nth-child(odd) {
+  background: #4580E3;
+}
+.page_content .bottom_content table tr:nth-child(even) {
+  background: #BABCBF;
+}
+.page_content .bottom_content table td {
+  padding: 1%;
+}
+.page_content .bottom_content table th {
+  padding: 1%;
+}
+footer {
+  background: #4580E3;
+  text-align: center;
+  padding: 20px 0;
+}
